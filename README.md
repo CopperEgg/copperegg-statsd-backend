@@ -51,9 +51,14 @@ options under the top-level `copperegg` hash:
 
 * `debug`: For debugging if something goes wrong.
 
-* `metric_group`: ...
+* `metric_group`: This is the name of the metric group you created in the CopperEgg UI. 
+				  Defaults to 'statsd' but you need to create it.  It should contain a
+				  metric for each metric name you send to statsd.
 
-* `object_name`: ...
+* `object_name`: This is a way to identify the metrics. The default is to use the hostname
+ 				 of the system statsd is running on.  You can change this to anything
+ 				 you want as long as it is unique.  Metrics you send will be 'attached' to
+ 				 this object.
 
 
 ## Publishing to multiple backends simultaneously
