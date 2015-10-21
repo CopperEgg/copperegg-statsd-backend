@@ -1,14 +1,14 @@
-# StatsD backend for CopperEgg
+# StatsD backend for Uptime Cloud Monitor
 
 ## Overview
 
 This is a pluggable backend for [StatsD][statsd], which
-publishes stats to [CopperEgg](http://copperegg.com).
+publishes stats to [Uptime Cloud Monitor](https://www.idera.com/infrastructure-monitoring-as-a-service/freetrialsubscriptionform).
 
 ## Requirements
 
 * [StatsD][statsd] versions >= 0.4.0.
-* An active [CopperEgg](http://copperegg.com/copperegg-signup/) account.
+    * An active [Uptime Cloud Monitor](https://www.idera.com/infrastructure-monitoring-as-a-service/freetrialsubscriptionform) account.
 
 ## Installation
 
@@ -18,7 +18,7 @@ publishes stats to [CopperEgg](http://copperegg.com).
 ## Configuration
 
 You have to add the following basic configuration information to your
-StatsD config file. You can find your apikey in the CopperEgg webapp, 
+StatsD config file. You can find your apikey in the Uptime Cloud Monitor webapp,
 under Settings.
 
 ```js
@@ -41,17 +41,17 @@ backends in the StatsD configuration file:
 ```
 
 Start/restart the statsd daemon to pick up the changes and 
-have your metrics sent to CopperEgg.
+have your metrics sent to Uptime Cloud Monitor.
 
 
 ## Additional configuration options
 
-The CopperEgg backend also supports the following optional configuration
+The Uptime Cloud Monitor backend also supports the following optional configuration
 options under the top-level `copperegg` hash:
 
 * `debug`: For debugging if something goes wrong.
 
-* `metric_group`: This is the name of the metric group you created in the CopperEgg UI. 
+* `metric_group`: This is the name of the metric group you created in the Uptime Cloud Monitor UI.
 				  Defaults to 'statsd' but you need to create it.  It should contain a
 				  metric for each metric name you send to statsd.
 
@@ -64,7 +64,7 @@ options under the top-level `copperegg` hash:
 ## Publishing to multiple backends simultaneously
 
 You can push metrics to multiple backends simultaneously, such as
-CopperEgg and Graphite. Just include both backends in the `backends`
+Uptime Cloud Monitor and Graphite. Just include both backends in the `backends`
 variable:
 
 ```js
@@ -82,7 +82,7 @@ None
 
 ## Development
 
-- [CopperEgg StatsD Backend](https://github.com/copperegg/copperegg-statsd-backend)
+- [Uptime Cloud Monitor StatsD Backend](https://github.com/copperegg/copperegg-statsd-backend)
 
 If you want to contribute:
 
